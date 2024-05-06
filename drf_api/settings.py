@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +28,8 @@ SECRET_KEY = 'django-insecure-x^6i_8oetl2$vd134=7nv!3*aey2&#+t*@h-p-kmy45rt%i%1w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-haloegen-ciproject5api-n7qze71tqaf.ws-eu111.gitpod.io' ,
+]
 
 
 # Application definition
@@ -37,6 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+
+
+    'products',
+    'likes',
+    'unlikes',
+    'profiles',
 ]
 
 MIDDLEWARE = [
