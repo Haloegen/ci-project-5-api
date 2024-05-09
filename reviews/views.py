@@ -1,5 +1,5 @@
 from rest_framework import generics, permissions, filters
-from drf_API.permissions import IsOwnerOrReadOnly
+from drf_api.permissions import IsOwnerOrReadOnly
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Review
 from .serializers import ReviewSerializer, ReviewDetailSerializer

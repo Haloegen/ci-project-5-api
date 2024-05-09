@@ -6,7 +6,7 @@ class Product(models.Model):
   "Product model related to the user/owner"
   owner=models.ForeignKey(User, on_delete=models.CASCADE)
   created_at = models.DateTimeField(auto_now_add=True)
-  link = models.URLField(max_length=255)
+  link = models.URLField(blank=True)
   updated_at = models.DateTimeField(auto_now=True)
   title=models.TextField(blank=True)
   content = models.TextField(blank=True)

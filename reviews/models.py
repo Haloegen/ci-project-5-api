@@ -8,7 +8,7 @@ class Review(models.Model):
     Comment model, related to User and Post
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    product = models.ForeignKey(product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     content = models.TextField()
