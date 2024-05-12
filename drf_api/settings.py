@@ -68,12 +68,10 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    '8000-haloegen-ciproject5api-n7qze71tqaf.ws-eu111.gitpod.io',
     'localhost',
-
+    'https://review-app-drf-b1e1686b7d68.herokuapp.com/'
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-haloegen-ciproject5api-n7qze71tqaf.ws-eu111.gitpod.io']
 
 # Application definition
 
@@ -104,8 +102,8 @@ INSTALLED_APPS = [
     'unlikes',
     'followers',
 ]
-SITE_ID = 1
 
+SITE_ID = 1
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
