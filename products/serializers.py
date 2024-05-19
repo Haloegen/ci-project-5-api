@@ -11,7 +11,7 @@ class ProductSerializer(serializers.ModelSerializer):
   profile_image=serializers.ReadOnlyField(source='owner.profile.image.url')
   like_id = serializers.SerializerMethodField()
   unlike_id = serializers.SerializerMethodField()
-  comments_count = serializers.ReadOnlyField()
+  reviews_count = serializers.ReadOnlyField()
   likes_count = serializers.ReadOnlyField()
   unlikes_count = serializers.ReadOnlyField()
 
