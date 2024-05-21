@@ -12,7 +12,8 @@ class ProductList(generics.ListCreateAPIView):
   permission_classes= [permissions.IsAuthenticatedOrReadOnly]
   queryset = Product.objects.annotate(
     likes_count=Count('likes', distinct=True),
-    unlikes_count=Count('unlikes', distinct=True)
+    unlikes_count=Count('unlikes', distinct=True),
+    reviews_count=Count('review', distinct=True)
   ).order_by('-created_at')
   filter_backends = [
     filters.OrderingFilter,
@@ -47,5 +48,6 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Product.objects.annotate(
         likes_count=Count('likes', distinct=True),
-        unlikes_count=Count('unlikes', distinct=True)
+        unlikes_count=Count('unlikes', distinct=True),
+        reviews_count=Count('review', distinct=True),
     ).order_by('-created_at')
