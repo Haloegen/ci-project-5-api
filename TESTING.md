@@ -72,47 +72,37 @@ To the best of my knowledge, there are currently no unresolved bugs in the code 
 
 ## **User Story Testing**
 ### Authorised user
-<hr>
 
 - User story: Be able to sign in to my account
 - Test : When signed out, I navigated to the navbar, as well as used links and buttons that are present across the site that push vistors to the sign in page, and filled the form to sign in
 - Result : Entered my details and clicked the submit button to be redirected to the  home page. In subsequent visits, the form auto-filled the sign in fields which as a user made my life easier
 - Verdict : Test passed
 
-<br>
 
-- User story 📖: Follow or unfollow another account
+- User story: Follow or unfollow another account
 - Test: Navigated to a profile page account and pressed follow and unfollow
 - Result: The function captured the click which increased and decreased followers and following count 
 - Verdict: Test passed
-
-<br>
 
 - User story: Like or dislike another post
 - Test: Navigated to a unique post which I didn't own and liked and unliked a post
 - Result: The like count increased and decreased
 - Verdict: Test passed
 
-<br>
 
 - User story: Can't like/dislike my own product
 - Test : Navigated to a unique product that I own and clicked the like/dislike icon
 - Result: The like ignored my request as I own the product. A Tooltip message is flagged to the user informing them it's not possible to like/dislike one's own product
 - Verdict: Test passed
 
-<br>
-
 - User story: Review on one's own product, as well as others
 - Test: Navigated to my own product as well as another user's and submitted a comment
 - Result: The review appeared in both cases
 - Verdict: Test passed
 
-<br>
 
 - User story: View a list of products
 - Test: Added test products and when to Productlist view URL to check they are displayed
 - Result: Instances were displayed as intended
 - Verdict: Test passed
-
-<br>
 
