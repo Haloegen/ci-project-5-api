@@ -5,7 +5,7 @@ RE.view is a product review app, where users can share experiences with products
 
 The RE.view API is the back-end portion of the RE.view app and has been developed using Django's Rest Framework. The app aims to let users share product reviews, and let users like or dislike them, leave their own review and follow their favourite reviewers on the website. The API attempts to create a smooth and enjoyable user experience, by providing the front end with its core functionality and logic.
 
-To view the deployed API, [*_click this link_*](https://review-app-drf-b1e1686b7d68.herokuapp.com/)
+To view the deployed API, [*_click this link_*](https://drf-api-review-dc5d5f6a2d20.herokuapp.com/)
 
 This is the backend repository for this project. To go the front end repository, [*_click this link_*](https://github.com/Haloegen/re.view-ci)
 
@@ -97,7 +97,7 @@ The language used to write this API is Python. Below is a list of the frameworks
 - Heroku - providing a platform in which to host the deployed project.
 
 ## **Testing**
-this is handled in a separate readme
+this is handled in a separate readme [**_testing_**]()
 
 ## **Deployment**
 In this part I will explain how I deployed this project, so that other users can clone and work on it
