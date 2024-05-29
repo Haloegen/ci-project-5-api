@@ -96,6 +96,9 @@ The language used to write this API is Python. Below is a list of the frameworks
 - Django CORS Headers - to handle the server headers required for Cross-Origin Resource Sharing.
 - Heroku - providing a platform in which to host the deployed project.
 
+## **Testing**
+this is handled in a separate readme
+
 ## **Deployment**
 In this part I will explain how I deployed this project, so that other users can clone and work on it
 
