@@ -23,7 +23,7 @@ CLOUDINARY_STORAGE = {
     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
 }
 
-MEDIA_URL = '/Drf-api/'
+MEDIA_URL = 'Drf-api/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -64,7 +64,7 @@ REST_AUTH_SERIALIZERS = {
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
+DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
@@ -120,6 +120,8 @@ if "CLIENT_ORIGIN" in os.environ:
 
 CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.gitpod\.io$",]
 CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = ["https://8000-haloegen-ciproject5api-n7qze71tqaf.ws-eu114.gitpod.io", "https://review-app-drf-b1e1686b7d68.herokuapp.com"]
 
 ROOT_URLCONF = 'drf_api.urls'
 
