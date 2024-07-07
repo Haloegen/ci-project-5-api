@@ -70,6 +70,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
     'review-app-drf-b1e1686b7d68.herokuapp.com/',
+    '8000-haloegen-ciproject5api-92tv02dyyz2.ws.codeinstitute-ide.net',
     'drf-api-review-dc5d5f6a2d20.herokuapp.com'
 ]
 
@@ -100,6 +101,7 @@ INSTALLED_APPS = [
     'products',
     'reviews',
     'likes',
+    'like_review',
     'unlikes',
     'followers',
 ]
@@ -149,10 +151,10 @@ WSGI_APPLICATION = 'drf_api.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
+#     # 'default': {
+#     #     'ENGINE': 'django.db.backends.sqlite3',
+#     #     'NAME': BASE_DIR / 'db.sqlite3',
+#     # }
 # }
 
 DATABASES = {
