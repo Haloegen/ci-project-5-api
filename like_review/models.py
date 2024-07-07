@@ -11,7 +11,7 @@ class LikeReview(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     review = models.ForeignKey(
         Review,
-        related_name='likes',
+        related_name='review_likes',
         on_delete=models.CASCADE
     )
     created_on = models.DateTimeField(auto_now_add=True)
