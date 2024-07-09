@@ -26,6 +26,9 @@ class ReviewSerializer(serializers.ModelSerializer):
             return like.id if like else None
         return None
 
+    def get_like_review_count(self, obj):
+        return obj.review_likes.count()
+
     def get_created_at(self, obj):
         return naturaltime(obj.created_at)
 
@@ -35,9 +38,9 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = [
-    'id', 'owner','is_owner', 'profile_id', 'profile_image', 'product', 'like_review_id' ,'like_review_count' , 'created_at', 'updated_at', 
-    'content'
-    ]
+            'id', 'owner', 'is_owner', 'profile_id', 'profile_image', 'product', 
+            'like_review_id', 'like_review_count', 'created_at', 'updated_at', 'content'
+        ]
 
 class ReviewDetailSerializer(ReviewSerializer):
     product = serializers.ReadOnlyField(source="product.id")
