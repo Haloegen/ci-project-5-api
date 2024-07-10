@@ -60,6 +60,7 @@ The Follower model allows logged in Users to follow of unfollow other users on t
 - The product model centres around the fundamental CRUD functionality that users can create, read, edit/update and delete (this is only possible for the post creator)
 - The Product has two custom components being the unlike/dislike(in hind sight I should have changed the naming of this, but as the project is finished it is abit late in the development cycle to fix, in future explanations I shall try to clarify between the ability to unlike a product you have liked, and disliking a project you have disliked).
 The other custom model is the review model, which uses similar code to the comment section in the Django+React project walkthrough.
+- The link component has not been introduced yet, and handling a url field left me with some complications that absorbed too much to validate and ensure a valid, and non corrubtable link was used, so as for now it has been left out.
 
 - We added a custom field being the price and the link models, which will allow users to share where they purchased the good via a link, and the price they paid for such goods.
 - In the future an better implentation would be the use of multiple content fields to help users expand on the product using multiple choices to help other users understand where the product fell short
@@ -72,6 +73,10 @@ The review model is a custom model that replaces the comments model from the wal
 #### **Likes** 
 The like model is the users ability to have increased interaction with a product and display their appreciation with a visual aid being the thumbs up(likes_count)
 - The like_id is attached to the user when they like a product, and its unique which helps prevents duplicates(at the time of writing this, their is a bug, where a user can spam the input and break the page on client side, which is fixed when the user refresh's, an additional future implentation could be validation to prevent this being an issue)
+
+#### **Like_Review**
+The Like_Review model, gives the users the ability to like a review that is left on a product and also and should give them a procedural code that changes based on if you have liked the review or not.
+- Users can like a review, which should reveal the like count on the review so you can see how many other users and liked the review.
 
 #### **Unlikes** 
 The unlike model functions similarly to the like function, this is essentially the dislike button, not the ability to unlike something you have liked

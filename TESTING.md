@@ -46,7 +46,7 @@ Below are some of the noteworthy bugs I encountered during the development proce
 
 
 
-#### Likes and Dislikes
+#### Likes and Dislikes + Like_Review
 
 I encountered several bugs while implementing Likes and Dislikes. Initially, despite providing choices from the start which resulted in incorrect data being pulled through to the API. Once fixed, the likes and dislikes worked, but I had only included a single 'count' field in the product view, so I couldn't pull the counts for each type of like or dislike—only the total count. To fix this, I added individual count fields to the queryset.
 
@@ -55,6 +55,8 @@ Another bug related to likes and dislikes occurred when filtering products by th
 Late in development, while testing the front-end like and dislike functionality, I discovered two more bugs. First, I was only collecting the like or dislike ID to send to the front-end, without linking it to the type. I resolved this by adding the product serializer field 'current_user_like_or_dislike' and defining the 'get_current_user_like_or_dislike' function to return an object containing both the ID and type.
 
 Lastly, in the product view, I realized I had forgotten to declare 'distinct=True' for each individual like and dislike count. This caused a peculiar bug where a product with one like would show a like count equal to the number of reviews if the product had reviews, despite only one like being stored in the database. Adding 'distinct=True' to each like and dislike count fixed this.
+
+Like_Review is the ability to like a review, and connects a count and an id to the review, this shall be expanded in the future with in the inclusion of a filter set which should filter the most liked reviews.
 
 ## **Product Development Testing**
 
