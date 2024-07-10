@@ -42,7 +42,7 @@ class ProductList(generics.ListCreateAPIView):
 
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve a post and edit or delete it if you own it.
+    Retrieve a product and edit or delete it if you own it.
     """
     serializer_class = ProductSerializer
     permission_classes = [IsOwnerOrReadOnly]
